@@ -22,7 +22,12 @@ MORSE_DICT = {
 
 cap = cv2.VideoCapture(0)
 
+
+# Set webcam resolution 
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 morse_sequence = ''
+
 translated_text = ''
 light_on = False
 on_start = None
@@ -88,3 +93,5 @@ cap.release()
 cv2.destroyAllWindows()
 
 print("\nFinal Message:", translated_text.strip())
+
+# -- -.-- / -. .- -- . / .. ... / -.- .-. .. ... .... .-

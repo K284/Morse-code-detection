@@ -17,6 +17,10 @@ face_mesh = mp_face_mesh.FaceMesh(static_image_mode=False, max_num_faces=1)
 
 cap = cv2.VideoCapture(0)
 
+# Set webcam resolution 
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+
 def get_ear(landmarks, width, height):
     LEFT_EYE = [33, 160, 158, 133, 153, 144]
     coords = [(int(landmarks.landmark[i].x * width), int(landmarks.landmark[i].y * height)) for i in LEFT_EYE]
