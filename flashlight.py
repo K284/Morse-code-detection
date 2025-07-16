@@ -79,7 +79,7 @@ while True:
     cv2.putText(frame, f"Text: {translated_text}", (10, 470),
                 cv2.FONT_HERSHEY_SIMPLEX, 1.2, (255, 0, 255), 3)
 
-    cv2.imshow("🔦 Morse Code via Flashlight", frame)
+    cv2.imshow("Morse Code via Flashlight", frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
@@ -87,4 +87,4 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 
-print("\n✅ Final Message:", translated_text.strip())
+print("\nFinal Message:", translated_text.strip())
